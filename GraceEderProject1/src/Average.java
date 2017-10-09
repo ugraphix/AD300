@@ -30,7 +30,7 @@ class Average{
 			//ask user to run again
 			System.out.println("Would you like to continue? (yes or no)");
 			String s = scan.nextLine();
-			//if statement for when user doesnt want to run program again
+			//when user doesnt want to run program again
 			if(s.equals("no")) {
 				stop = true;
 			}
