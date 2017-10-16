@@ -23,12 +23,7 @@ public class Project2 {
 		//read file into map
 		Scanner d = new Scanner(new FileReader("words.txt"));
 		Map<String, Integer> wordCountMap = getCountMap(d);
-		for (String word: wordCountMap.keySet()) {
-			int count = wordCountMap.get(word);
-			if (count > 1 ) {
-				System.out.println(word + " occurs " + count + " times.");
-			}
-		}
+		
 
 		//interrogate the ArrayList and remove all duplicate words
 		Scanner m = new Scanner(new FileReader("words.txt"));
@@ -44,10 +39,19 @@ public class Project2 {
 		}
 
 		//print words that are not duplicates
-		System.out.println();
-		System.out.println();
 		System.out.println("The new list with all of the duplicate words removed: ");
 		System.out.println(notDuplicate );
+		System.out.println();
+		System.out.println();
+		
+		//loop that prints the number count of all duplicate words
+		System.out.println("Below is a list of duplicate words, including how many times they appear in the file:");
+		for (String word: wordCountMap.keySet()) {
+			int count = wordCountMap.get(word);
+			if (count > 1 ) {
+				System.out.println(word + " occurs " + count + " times.");
+			}
+		}
 	}
 
 	//reads file text and returns a map from words to counts
